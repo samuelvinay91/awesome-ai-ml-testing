@@ -1,15 +1,28 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    const loadingElement = document.getElementById('resources-loading');
+    const resourcesGrid = document.getElementById('resources-grid');
+    
+    // Initially hide the grid and show loading
+    resourcesGrid.style.display = 'none';
+
     try {
-        // Fetch the README file content
-        const response = await fetch('https://raw.githubusercontent.com/samuelvinay91/awesome-ai-ml-testing/main/README.md');
+        // Fetch the README file content using GitHub API to avoid CORS issues
+        const response = await fetch('https://api.github.com/repos/samuelvinay91/awesome-ai-ml-testing/contents/README.md');
         if (!response.ok) {
             throw new Error('Failed to fetch README content');
         }
         
-        const readmeContent = await response.text();
+        const data = await response.json();
+        // GitHub API returns content as base64 encoded
+        const readmeContent = atob(data.content);
         
         // Parse the README content to extract resource sections and items
         const resourceCategories = parseResourcesFromReadme(readmeContent);
+        
+        // Hide loading indicator
+        loadingElement.style.display = 'none';
+        // Show the resources grid
+        resourcesGrid.style.display = 'grid';
         
         // Populate the resources grid
         populateResourcesGrid(resourceCategories);
@@ -22,11 +35,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         
     } catch (error) {
         console.error('Error loading resources:', error);
-        document.getElementById('resources-grid').innerHTML = `
-            <div class="error-message">
-                <p><i class="fas fa-exclamation-triangle"></i> Failed to load resources. Please try again later.</p>
-            </div>
+        // Fallback to hardcoded resources for major categories
+        const fallbackResources = createFallbackResources();
+        populateResourcesGrid(fallbackResources);
+        setupResourceFilter(fallbackResources);
+        createCategoriesChart(fallbackResources);
+        
+        // Show warning message that we're using fallback data
+        const resourcesSection = document.getElementById('resources');
+        const warningEl = document.createElement('div');
+        warningEl.className = 'warning-message';
+        warningEl.innerHTML = `
+            <p><i class="fas fa-exclamation-triangle"></i> Using local backup data. Some resources may not be up to date.</p>
         `;
+        resourcesSection.querySelector('.container').insertBefore(warningEl, resourcesSection.querySelector('.resources-filter'));
     }
 });
 
@@ -235,6 +257,107 @@ function filterResources(searchTerm, categoryFilter) {
             card.style.display = 'none';
         }
     });
+}
+
+function createFallbackResources() {
+    // Create fallback resource data for major categories
+    return {
+        'general': {
+            title: 'General ML Testing Frameworks',
+            resources: [
+                {
+                    name: 'Deepchecks',
+                    link: 'https://github.com/deepchecks/deepchecks',
+                    description: 'Test suite for data and models, validating a wide range of potential issues.',
+                    category: 'general',
+                    icon: 'fa-check-double'
+                },
+                {
+                    name: 'MLtest',
+                    link: 'https://github.com/Thenerdstation/mltest',
+                    description: 'Testing infrastructure for machine learning with focus on TensorFlow.',
+                    category: 'general',
+                    icon: 'fa-check-double'
+                }
+            ]
+        },
+        'llm': {
+            title: 'LLM & Chatbot Testing',
+            resources: [
+                {
+                    name: 'LangChain Evaluation Framework',
+                    link: 'https://github.com/langchain-ai/langchain',
+                    description: 'Testing framework for LLM applications.',
+                    category: 'llm',
+                    icon: 'fa-robot'
+                },
+                {
+                    name: 'HELM',
+                    link: 'https://github.com/stanford-crfm/helm',
+                    description: 'Holistic Evaluation of Language Models.',
+                    category: 'llm',
+                    icon: 'fa-robot'
+                }
+            ]
+        },
+        'data': {
+            title: 'Data Validation & Quality',
+            resources: [
+                {
+                    name: 'Great Expectations',
+                    link: 'https://github.com/great-expectations/great_expectations',
+                    description: 'Framework for data validation and quality.',
+                    category: 'data',
+                    icon: 'fa-database'
+                },
+                {
+                    name: 'TFDV',
+                    link: 'https://github.com/tensorflow/data-validation',
+                    description: 'TensorFlow Data Validation for analyzing and validating ML data.',
+                    category: 'data',
+                    icon: 'fa-database'
+                }
+            ]
+        },
+        'fairness': {
+            title: 'Fairness, Bias & Ethics Testing',
+            resources: [
+                {
+                    name: 'AI Fairness 360',
+                    link: 'https://github.com/Trusted-AI/AIF360',
+                    description: 'Toolkit for detecting and mitigating bias in ML models.',
+                    category: 'fairness',
+                    icon: 'fa-balance-scale'
+                },
+                {
+                    name: 'Fairlearn',
+                    link: 'https://github.com/fairlearn/fairlearn',
+                    description: 'Tools for assessing and improving fairness of ML systems.',
+                    category: 'fairness',
+                    icon: 'fa-balance-scale'
+                }
+            ]
+        },
+        'monitoring': {
+            title: 'Monitoring & Observability',
+            resources: [
+                {
+                    name: 'Evidently AI',
+                    link: 'https://github.com/evidentlyai/evidently',
+                    description: 'Tools for ML model monitoring and evaluation.',
+                    category: 'monitoring',
+                    icon: 'fa-chart-line'
+                },
+                {
+                    name: 'WhyLogs',
+                    link: 'https://github.com/whylabs/whylogs',
+                    description: 'Profiling library for ML/AI data and model monitoring.',
+                    category: 'monitoring',
+                    icon: 'fa-chart-line'
+                }
+            ]
+        }
+    };
 }
 
 function createCategoriesChart(resourceCategories) {
