@@ -1,4 +1,17 @@
-theme: jekyll-theme-cayman
 title: Awesome AI/ML Testing
 description: A curated list of awesome testing frameworks, tools, methodologies, and resources for AI/ML systems
 show_downloads: false
+baseurl: ""
+url: ""
+github_username: samuelvinay91
+repository: samuelvinay91/awesome-ai-ml-testing
+markdown: kramdown
+highlighter: rouge
+lsi: false
+safe: true
+incremental: false
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
