@@ -4,8 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
     initializePlaceholderChart();
 });
 
+// Store chart instances for later destruction if needed
+let categoriesChartInstance = null;
+
 function initializePlaceholderChart() {
     const ctx = document.getElementById('categoriesChart').getContext('2d');
+    
+    // Destroy existing chart if it exists
+    if (categoriesChartInstance) {
+        categoriesChartInstance.destroy();
+    }
     
     // Placeholder data
     const placeholderData = {
@@ -19,7 +27,7 @@ function initializePlaceholderChart() {
     };
     
     // Create a placeholder chart
-    new Chart(ctx, {
+    categoriesChartInstance = new Chart(ctx, {
         type: 'bar',
         data: placeholderData,
         options: {

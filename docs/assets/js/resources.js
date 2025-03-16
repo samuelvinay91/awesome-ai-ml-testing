@@ -35,11 +35,32 @@ document.addEventListener('DOMContentLoaded', async () => {
         
     } catch (error) {
         console.error('Error loading resources:', error);
+        
+        // Hide loading indicator even on error
+        loadingElement.style.display = 'none';
+        // Show the resources grid
+        resourcesGrid.style.display = 'grid';
+        
         // Fallback to hardcoded resources for major categories
         const fallbackResources = createFallbackResources();
         populateResourcesGrid(fallbackResources);
         setupResourceFilter(fallbackResources);
-        createCategoriesChart(fallbackResources);
+        
+        try {
+            // Try to create the chart, but don't break if it fails
+            createCategoriesChart(fallbackResources);
+        } catch (chartError) {
+            console.error('Error creating chart:', chartError);
+            // Add a message where the chart should be
+            const chartCanvas = document.getElementById('categoriesChart');
+            const chartContainer = chartCanvas.parentElement;
+            chartCanvas.style.display = 'none';
+            
+            const errorMessage = document.createElement('div');
+            errorMessage.className = 'error-message';
+            errorMessage.innerHTML = '<p><i class="fas fa-exclamation-triangle"></i> Unable to load chart visualization.</p>';
+            chartContainer.appendChild(errorMessage);
+        }
         
         // Show warning message that we're using fallback data
         const resourcesSection = document.getElementById('resources');
@@ -383,7 +404,13 @@ function createCategoriesChart(resourceCategories) {
         '#fd7e14', '#ffc107', '#28a745', '#20c997', '#17a2b8'
     ];
     
-    new Chart(ctx, {
+    // Destroy existing chart if it exists
+    if (window.categoriesChartInstance) {
+        window.categoriesChartInstance.destroy();
+    }
+    
+    // Create a new chart and store the instance globally
+    window.categoriesChartInstance = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
