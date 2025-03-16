@@ -321,13 +321,13 @@ section {
   gap: 3rem;
 }
 
-.about-mission {
+.about-mission, .about-focus {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
 }
 
-.about-mission h3 {
+.about-mission h3, .about-focus h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
