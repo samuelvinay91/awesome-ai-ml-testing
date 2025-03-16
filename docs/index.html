@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome AI/ML Testing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="assets/images/logo.svg" alt="Awesome AI/ML Testing" class="logo-image">
+                    <h1>Awesome AI/ML Testing</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resources">Resources</a></li>
+                    <li><a href="#contribute">Contribute</a></li>
+                    <li><a href="https://github.com/samuelvinay91/awesome-ai-ml-testing" target="_blank" class="github-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>A curated list of awesome testing frameworks, tools, methodologies, and resources for AI/ML systems</h1>
+                <p>Ensuring quality, reliability, and fairness in AI/ML systems throughout their lifecycle</p>
+                <div class="hero-buttons">
+                    <a href="#resources" class="btn btn-primary">Explore Resources</a>
+                    <a href="#about" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">18+</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Tools & Resources</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Contributors</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/hero-illustration.svg" alt="AI/ML Testing Illustration">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About This Project</h2>
+                <p>Why we created this collection and how it can help you</p>
+            </div>
+            <div class="about-content">
+                <div class="about-mission">
+                    <h3>Our Mission</h3>
+                    <p>Testing AI/ML systems presents unique challenges beyond traditional software testing. 
+                       This curated list provides resources for ensuring the quality, reliability, and fairness of 
+                       your AI/ML systems throughout their lifecycle.</p>
+                    <p>Whether you're new to ML testing or an experienced practitioner, this list offers valuable 
+                       resources for implementing effective testing strategies for your AI/ML applications.</p>
+                </div>
+                <div class="about-cards">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Community-Driven</h4>
+                        <p>Maintained by the community, for the community. We welcome contributions from all practitioners.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <h4>Curated Quality</h4>
+                        <p>Each resource is carefully vetted to ensure relevance and value to AI/ML testing practitioners.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h4>Comprehensive Coverage</h4>
+                        <p>From general frameworks to specialized tools for fairness testing, we cover the full spectrum.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Constantly Evolving</h4>
+                        <p>The list is regularly updated with new tools and resources as the field evolves.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories-overview" class="categories-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testing Categories</h2>
+                <p>Explore the diverse areas of AI/ML testing covered in our collection</p>
+            </div>
+            <div class="categories-visualization">
+                <canvas id="categoriesChart"></canvas>
+            </div>
+            <div class="categories-description">
+                <p>Our collection spans multiple domains of AI/ML testing, from general frameworks to specialized tools for specific areas like fairness testing, adversarial robustness, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resource Explorer</h2>
+                <p>Discover tools and resources by category</p>
+            </div>
+            <div class="resources-filter">
+                <div class="search-bar">
+                    <input type="text" id="resource-search" placeholder="Search resources...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="filter-options">
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="general">General ML Testing</option>
+                        <option value="llm">LLM & Chatbot Testing</option>
+                        <option value="data">Data Validation & Quality</option>
+                        <option value="fairness">Fairness & Ethics</option>
+                        <option value="adversarial">Adversarial Testing</option>
+                        <option value="monitoring">Monitoring & Observability</option>
+                        <option value="cicd">CI/CD for ML</option>
+                        <option value="multimodal">Multi-modal Testing</option>
+                        <option value="regulatory">Regulatory Compliance</option>
+                        <option value="generative">Generative AI Evaluation</option>
+                        <option value="hardware">Hardware-aware ML Testing</option>
+                        <option value="safety">AI Safety Testing</option>
+                        <option value="benchmarks">Benchmarks & Datasets</option>
+                        <option value="books">Books & Papers</option>
+                        <option value="courses">Courses & Tutorials</option>
+                        <option value="blogs">Blogs & Newsletters</option>
+                        <option value="communities">Communities & Conferences</option>
+                        <option value="case-studies">Case Studies</option>
+                    </select>
+                </div>
+            </div>
+            <div class="resources-grid" id="resources-grid">
+                <!-- Resource cards will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contribute" class="contribute">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Contribute</h2>
+                <p>Join our community and help improve the collection</p>
+            </div>
+            <div class="contribute-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Fork the Repository</h4>
+                    <p>Start by forking the repository on GitHub to your own account.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Create a Branch</h4>
+                    <p>Create a new branch for your changes (e.g., add-new-tool).</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Make Your Changes</h4>
+                    <p>Add your new tool or resource following our formatting guidelines.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Submit a Pull Request</h4>
+                    <p>Submit your changes for review by the maintainers.</p>
+                </div>
+            </div>
+            <div class="contribute-cta">
+                <a href="https://github.com/samuelvinay91/awesome-ai-ml-testing/blob/main/CONTRIBUTING.md" class="btn btn-primary" target="_blank">Read Contribution Guidelines</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="community">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Community</h2>
+                <p>The people who make this project possible</p>
+            </div>
+            <div class="contributors-visualization">
+                <div id="contributors-network"></div>
+            </div>
+            <div class="community-stats">
+                <div class="stat">
+                    <span class="stat-number" id="stars-count">0</span>
+                    <span class="stat-label">Stars</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="forks-count">0</span>
+                    <span class="stat-label">Forks</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="contributors-count">0</span>
+                    <span class="stat-label">Contributors</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="Awesome AI/ML Testing" class="logo-image">
+                    <h3>Awesome AI/ML Testing</h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#resources">Resources</a></li>
+                            <li><a href="#contribute">Contribute</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://github.com/samuelvinay91/awesome-ai-ml-testing" target="_blank">GitHub Repository</a></li>
+                            <li><a href="https://github.com/samuelvinay91/awesome-ai-ml-testing/blob/main/CONTRIBUTING.md" target="_blank">Contributing Guidelines</a></li>
+                            <li><a href="https://github.com/samuelvinay91/awesome-ai-ml-testing/blob/main/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Awesome AI/ML Testing. Licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0</a>.</p>
+                <p>Built with ❤️ by the AI/ML testing community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/charts.js"></script>
+    <script src="assets/js/resources.js"></script>
+</body>
+</html>
