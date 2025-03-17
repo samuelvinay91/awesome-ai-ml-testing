@@ -40,7 +40,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [Giskard](https://github.com/giskard-ai/giskard) - Testing framework focused on vulnerability scanning and detection.
 - [Pytest-ml](https://github.com/EthicalML/pytest-ml) - Extension of pytest for validating ML code and models.
 - [Manifold](https://github.com/uber/manifold) - Visual debugging tool for machine learning models.
-- [ModelDB](https://github.com/VertexAI/modeldb) - System to version ML models and track experiments.
+- [ModelDB](https://github.com/mitdbg/modeldb) - System to version ML models and track experiments.
 - [MLFlow](https://github.com/mlflow/mlflow) - Platform for the ML lifecycle, including model testing.
 - [HyperDrive](https://github.com/microsoft/nni) - Hyperparameter tuning and neural architecture search.
 - [Kedro](https://github.com/quantumblacklabs/kedro) - Framework for creating reproducible ML pipelines.
@@ -68,7 +68,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [TruLens-Eval](https://github.com/truera/trulens) - Advanced evaluation metrics for LLMs beyond traditional metrics.
 - [MT-Bench](https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge) - Multi-turn benchmark for LLM conversation quality.
 - [Anthropic's Claude Evaluations](https://github.com/anthropics/evals) - Specialized testing framework for Constitutional AI models.
-- [FairEval](https://github.com/i-gallegos/fair-eval) - Framework for evaluating fairness in language models.
+- [FairEval](https://github.com/i-gallegos/faireval) - Framework for evaluating fairness in language models.
 - [AgentBench](https://github.com/THUDM/AgentBench) - Framework for evaluating LLM agents on complex tasks.
 
 ## 📊 Data Validation & Quality
@@ -78,7 +78,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [Deequ](https://github.com/awslabs/deequ) - Data quality validation for large datasets (by AWS).
 - [Pandera](https://github.com/pandera-dev/pandera) - Statistical data validation for pandas.
 - [Cerberus](https://github.com/pyeve/cerberus) - Lightweight and extensible data validation library.
-- [Data-Linter](https://github.com/databricks/data-linter) - Tool to identify common data quality issues.
+- [Data-Linter](https://github.com/databrickslabs/data-quality) - Tool to identify common data quality issues.
 - [DataProfiler](https://github.com/capitalone/DataProfiler) - Profiling and detecting sensitive information in data.
 - [Soda Core](https://github.com/sodadata/soda-core) - Data quality testing and monitoring.
 - [PyDeequ](https://github.com/awslabs/python-deequ) - Python wrapper for Deequ library.
@@ -126,8 +126,8 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [Arize AI](https://github.com/Arize-ai/client_python) - ML observability platform.
 - [NannyML](https://github.com/NannyML/nannyml) - Post-deployment model performance monitoring.
 - [BentoML](https://github.com/bentoml/BentoML) - Model serving with monitoring capabilities.
-- [Datadog](https://www.datadoghq.com/product/machine-learning-monitoring/) - ML monitoring integrated with infrastructure.
-- [Fiddler AI](https://github.com/fiddler-labs/fiddler-samples) - Model monitoring focused on explainability.
+- [Datadog](https://www.datadoghq.com/product/observability-monitoring/) - ML monitoring integrated with infrastructure.
+- [Fiddler AI](https://github.com/fiddler-ai/examples) - Model monitoring focused on explainability.
 - [Gantry](https://github.com/gantry-ml/gantry) - Production ML monitoring and debugging.
 - [Aporia](https://github.com/aporia-ai/aporia) - Model observability platform.
 - [Helicone](https://github.com/Helicone/helicone) - Open-source LLM observability platform.
@@ -142,7 +142,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [GitHub Actions for ML](https://github.com/machine-learning-apps/actions-ml-cicd) - GitHub Actions workflows for ML.
 - [DVC](https://github.com/iterative/dvc) - Git for data science, enables versioning of data and models.
 - [CML](https://github.com/iterative/cml) - Continuous Machine Learning - CI/CD for ML projects.
-- [Jenkins ML Plugin](https://github.com/jenkinsci/ml-plugin) - Plugin connecting Jenkins with ML libraries.
+- [Jenkins ML Plugin](https://github.com/jenkinsci/machine-learning-plugin) - Plugin connecting Jenkins with ML libraries.
 - [MLReef](https://github.com/MLReef/mlreef) - GitLab-based collaboration platform for ML.
 - [Pachyderm](https://github.com/pachyderm/pachyderm) - Data lineage and version control for data science.
 - [ZenML](https://github.com/zenml-io/zenml) - MLOps framework focusing on reproducibility.
@@ -161,7 +161,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 
 ## 📜 Regulatory Compliance Testing
 
-- [AI-RMF](https://github.com/NIST/AI-RMF) - NIST AI Risk Management Framework implementation tools.
+- [AI-RMF](https://pages.nist.gov/AIRMF/) - NIST AI Risk Management Framework implementation tools.
 - [GDPR Compliance Scanner](https://github.com/privacyradius/gdpr-checklist) - Tools for checking AI systems against GDPR requirements.
 - [OpenAI Evals for Legal Compliance](https://github.com/openai/evals) - Extensions to OpenAI's evaluation framework focused on legal requirements.
 - [EU AI Act Compliance Toolkit](https://github.com/ethical-ai-toolkit/eu-ai-act) - Tools specifically designed for testing compliance with the EU AI Act.
@@ -173,7 +173,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [Image Generation Evaluator](https://github.com/openai/dalle-2-preview) - Tools for evaluating the quality and diversity of generated images.
 - [SEGA](https://github.com/google-research/sega) - Self-Guided Evaluation framework for generative models.
 - [Music Generation Testing Framework](https://github.com/magenta/magenta) - Testing tools for music generation systems.
-- [Text2Image-Evaluation](https://github.com/mehdidc/text2image_evaluation) - Framework for evaluating text-to-image generation models.
+- [Text2Image-Evaluation](https://github.com/mehdidc/clip_as_service) - Framework for evaluating text-to-image generation models.
 
 ## 💻 Hardware-aware ML Testing
 
@@ -187,7 +187,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 
 - [AI Safety Gridworlds](https://github.com/deepmind/ai-safety-gridworlds) - Test environments for AI safety research.
 - [AIS Testbed](https://github.com/openai/safety-gym) - Open-source framework for testing AI safety properties.
-- [Anthropic's Constitutional AI Testing](https://github.com/anthropics/constitutional-ai-testbed) - Testing framework for constitutional AI approaches.
+- [Anthropic's Constitutional AI Testing](https://github.com/anthropics/constitutional-ai) - Testing framework for constitutional AI approaches.
 - [Alignment Evaluation](https://github.com/EleutherAI/alignment-handbook) - Tools for testing goal alignment in agent-based AI systems.
 - [Robustness Gym](https://github.com/robustness-gym/robustness-gym) - Testing toolkit for evaluating robustness of AI systems.
 
@@ -202,7 +202,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [BIG-bench](https://github.com/google/BIG-bench) - Beyond the Imitation Game benchmark for LLMs.
 - [MMLU](https://github.com/hendrycks/test) - Massive Multitask Language Understanding benchmark.
 - [LM Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) - Framework for evaluating language models.
-- [OLID](https://github.com/idontflow/OLID) - Offensive Language Identification Dataset.
+- [OLID](https://github.com/Zeeraktalat/OLID) - Offensive Language Identification Dataset.
 - [SQuAD](https://github.com/rajpurkar/SQuAD-explorer) - Stanford Question Answering Dataset.
 - [BenchMarks.AI](https://benchmarks.ai/) - Comprehensive benchmarking platform for AI.
 
@@ -231,7 +231,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [Microsoft Responsible AI Resources](https://www.microsoft.com/en-us/ai/responsible-ai-resources) - Educational content on responsible AI.
 - [Fast.ai](https://github.com/fastai/fastai) - Practical courses including model validation and testing.
 - [Full Stack Deep Learning](https://fullstackdeeplearning.com/) - Course with emphasis on testing & deployment.
-- [Udacity ML DevOps Engineer](https://www.udacity.com/course/machine-learning-dev-ops-engineer-nanodegree--nd0821) - Nanodegree on ML operations.
+- [Udacity ML DevOps Engineer](https://www.udacity.com/enrollment/nd0821/machine-learning-dev-ops-engineer-nanodegree) - Nanodegree on ML operations.
 - [ML Engineering for Production](https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops) - Andrew Ng's course on MLOps.
 - [Made With ML MLOps Course](https://madewithml.com/#mlops) - Free MLOps curriculum including testing.
 - [Weights & Biases Model Testing Tutorial](https://wandb.ai/site/articles/testing-ml-models-in-production) - Practical guide to testing ML models.

@@ -12,7 +12,7 @@
 
 ## Checklist
 <!-- Mark completed items with an 'x' -->
-- [ ] I have read the [CONTRIBUTING](CONTRIBUTING.md) document
+- [ ] I have read the [CONTRIBUTING](../CONTRIBUTING.md) document
 - [ ] The resource(s) I'm adding is/are actively maintained (if applicable)
 - [ ] All links are valid and point to official or canonical sources
 - [ ] My description is concise, informative, and ends with a period

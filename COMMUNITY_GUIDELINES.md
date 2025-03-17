@@ -24,18 +24,18 @@ This document outlines our strategy for growing the Awesome AI/ML Testing commun
 ### Newsletters
 
 Submit the repository to relevant newsletters:
-- [The Algorithm](https://www.technologyreview.com/newsletter-sign-up/) (MIT Technology Review)
+- [The Algorithm](https://www.technologyreview.com/newsletters/) (MIT Technology Review)
 - [Import AI](https://jack-clark.net/import-ai/) 
 - [MLOps Community Newsletter](https://mlops.community/newsletter/)
-- [TheSequence](https://thesequence.substack.com/)
+- [TheSequence](https://thesequence.ai/)
 
 ### Forums & Communities
 
 Share and engage in:
-- [r/MachineLearning](https://www.reddit.com/r/MachineLearning/)
-- [r/MLOps](https://www.reddit.com/r/MLOps/) 
+- [r/MachineLearning](https://www.reddit.com/r/MachineLearning)
+- [r/MLOps](https://www.reddit.com/r/MLOps) 
 - [HackerNews](https://news.ycombinator.com/)
-- [ML Subreddit](https://www.reddit.com/r/learnmachinelearning/)
+- [ML Subreddit](https://www.reddit.com/r/learnmachinelearning)
 - Discord communities: ML Discord, Hugging Face, PyTorch, TensorFlow
 - Slack communities: TWIML, MLOps Community
 
