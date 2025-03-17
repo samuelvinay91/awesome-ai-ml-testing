@@ -1,78 +1,48 @@
-# Contribution Guidelines
+# Contributing Guidelines
 
-Thank you for your interest in contributing to the Awesome AI/ML Testing list! This document outlines the process for contributing to ensure we maintain high quality and consistency.
+We welcome contributions from the community! Here's how you can help improve this resource:
 
 ## How to Contribute
 
-1. Fork this repository
-2. Create a branch for your changes (`git checkout -b add-new-tool`)
-3. Make your changes
-4. Submit a pull request
+1. **Submit a Resource**
+   - Use our [Resource Submission Template](.github/ISSUE_TEMPLATE/resource-submission.md)
+   - Include all required information
+   - Provide proper attribution and links
 
-## Guidelines for Adding New Content
+2. **Report Issues**
+   - Use the [Issue Tracker](https://github.com/samuelvinay91/awesome-ai-ml-testing/issues)
+   - Clearly describe the issue
+   - Include relevant links and screenshots
 
-When adding new tools or resources to the list, please ensure:
+3. **Suggest Improvements**
+   - Open an issue with your suggestions
+   - Explain the rationale behind your proposal
+   - Provide examples if applicable
 
-- The item is related to AI/ML testing and would be valuable to the community
-- It is actively maintained (for tools and frameworks) or relevant (for papers, courses)
-- You place it in the appropriate category
-- Your description is concise and informative
-- Links are valid and point to the official repository or documentation
+## Contribution Rules
 
-### Format for Adding Items
-
-- Add a single item as: `- [Name](link) - Brief description that ends with a period.`
-- For academic papers without repos: `- [Paper Title](link to paper) - Brief description. Author(s), Publication Year.`
-
-## Requirements for New Categories
-
-If you'd like to suggest a new category:
-
-1. Ensure the category is distinct and not overlapping significantly with existing categories
-2. Include at least 3-5 items in the new category
-3. Update the table of contents to include the new category
-
-## Example PR Template
-
-```markdown
-## Description
-Brief description of the changes proposed.
-
-## Type of Change
-- [ ] New tool/framework
-- [ ] New resource (paper, course, dataset)
-- [ ] New category
-- [ ] Improvement to existing item
-- [ ] Fix (e.g., broken link)
-- [ ] Other (please specify)
-
-## Checklist
-- [ ] I have read the contribution guidelines
-- [ ] Link(s) provided are valid and point to official resources
-- [ ] Description is concise and informative
-- [ ] Item is placed in the appropriate category
-- [ ] Table of contents is updated (if needed)
-```
-
-## Link Checking
-
-This repository uses GitHub Actions to automatically check for broken links. Before submitting your PR:
-
-1. Make sure all links are valid
-2. Format URLs properly (prefer HTTPS over HTTP when available)
-3. Avoid URL shorteners
+- All submissions must be relevant to AI/ML testing
+- Provide clear and concise descriptions
+- Include proper attribution and licensing information
+- Ensure resources are actively maintained
+- Avoid self-promotion or commercial content
 
 ## Review Process
 
-All contributions will be reviewed for:
-
-1. Relevance to AI/ML testing
-2. Quality of the resource
-3. Accuracy and completeness of information
-4. Adherence to the formatting guidelines
+1. Initial screening by maintainers
+2. Community feedback period (3 days)
+3. Final approval and merging
+4. Addition to appropriate section in README.md
 
 ## Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+All contributors must follow our [Code of Conduct](CODE_OF_CONDUCT.md). We are committed to maintaining a welcoming and inclusive community.
 
-Thank you for helping improve the Awesome AI/ML Testing list!
+## Recognition
+
+- Contributors will be listed in the [Community Contributors](#community-contributors) section
+- Significant contributions may be highlighted in our weekly updates
+
+## Getting Help
+
+For questions about contributing, please open an issue or contact the maintainers.

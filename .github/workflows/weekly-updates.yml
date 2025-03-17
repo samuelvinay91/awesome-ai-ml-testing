@@ -1,0 +1,42 @@
+name: Weekly Updates
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Every Monday at 00:00 UTC
+  workflow_dispatch:
+
+jobs:
+  update-resources:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests beautifulsoup4 markdown
+
+    - name: Run scraper
+      run: |
+        python scripts/scrape_resources.py
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add README.md
+        git commit -m "Weekly update: New resources added"
+        git push
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        title: "Weekly Update: New Resources"
+        body: "Automated weekly update of trending AI/ML testing resources"
+        branch: "weekly-update"
+        base: "main"
