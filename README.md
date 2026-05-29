@@ -92,6 +92,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [Anthropic's Claude Evaluations](https://github.com/anthropics/evals) - Specialized testing framework for Constitutional AI models.
 - [FairEval](https://github.com/i-gallegos/faireval) - Framework for evaluating fairness in language models.
 - [AgentBench](https://github.com/THUDM/AgentBench) - Framework for evaluating LLM agents on complex tasks.
+- [ai-evaluation](https://github.com/future-agi/ai-evaluation) - Open-source LLM evaluation framework with 50+ metrics, LLM-as-Judge, and guardrail scanners (jailbreak, PII, injection).
 
 ## 📊 Data Validation & Quality
 
@@ -150,6 +151,7 @@ Whether you're new to ML testing or an experienced practitioner, this list offer
 - [BentoML](https://github.com/bentoml/BentoML) - Model serving with monitoring capabilities.
 - [Datadog](https://www.datadoghq.com/product/observability-monitoring/) - ML monitoring integrated with infrastructure.
 - [Fiddler AI](https://github.com/fiddler-ai/examples) - Model monitoring focused on explainability.
+- [traceAI](https://github.com/future-agi/traceAI) - Open-source OpenTelemetry-native tracing for LLM and agent apps with 50+ framework integrations.
 - [Gantry](https://github.com/gantry-ml/gantry) - Production ML monitoring and debugging.
 - [Aporia](https://github.com/aporia-ai/aporia) - Model observability platform.
 - [Helicone](https://github.com/Helicone/helicone) - Open-source LLM observability platform.
